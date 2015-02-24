@@ -1,0 +1,79 @@
+
+/* Main content styles
+-------------------------------------------------- */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    /*background-color: #333399;   */
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    /*line-height: 1.2;*/
+}
+
+.centered-text {
+  text-align: center;
+}
+
+h2 {
+    font-weight: 600;
+    /*font-size: 2.625rem;*/
+}
+
+h2 a {
+    color: #221c35;
+}
+
+p {
+    font-weight: 400;
+    margin-top: 1.125rem;
+}
+
+.button {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.button-text {
+  letter-spacing: 0.0875rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.medium-grey {
+    background-color: #96969a;
+}
+
+/* Simple Simon Styles
+-------------------------------------------------- */
+
+#red, #yellow, #green, #blue {
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+#red {
+  background-color: #FF4136;
+}
+
+#yellow {
+  background-color: #FFDC00;
+}
+
+#green {
+  background-color: #2ECC40;
+}
+
+#blue {
+  background-color: #0074D9;
+}
+
+
+
