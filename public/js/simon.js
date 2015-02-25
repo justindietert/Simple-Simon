@@ -34,7 +34,7 @@ function userClick(event) {
 
 // when user mouses up on tile, opacity is brought back down to original opacity
 function userUp(event) {
-    event.target.style.opacity = "0.6";
+    event.target.style.opacity = "0.5";
 }
 
 // check if user selection matches simon's sequence

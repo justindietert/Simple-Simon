@@ -14,11 +14,20 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 h1 {
     font-weight: 300;
+    color: #96969a;
     /*line-height: 1.2;*/
 }
 
-.centered-text {
+.center-text {
   text-align: center;
+}
+
+.top-row {
+  margin-top: 1.75rem;
+}
+
+.middle-row {
+  padding-top: 1.75rem;
 }
 
 h2 {
@@ -52,11 +61,44 @@ p {
 /* Simple Simon Styles
 -------------------------------------------------- */
 
+ul.quadrant {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  width: 18.875rem;
+  height: 18.875rem;
+  border-radius: 18.875rem;
+  overflow: hidden;
+  /*background: #b00;*/
+}
+
+ul.quadrant li {
+  width: 9.375rem;
+  height: 9.375rem;
+  float: left;
+}
+
+ul.quadrant li.top-left {
+  margin: 0 0.0625rem 0.0625rem 0;
+}
+
+ul.quadrant li.top-right {
+  margin: 0 0 0.0625rem 0.0625rem;
+}
+
+ul.quadrant li.bottom-left {
+  margin: 0.0625rem 0.0625rem 0 0;
+}
+
+ul.quadrant li.bottom-right {
+  margin: 0.0625rem 0 0 0.0625rem;
+}
+
 #red, #yellow, #green, #blue {
-  width: 10rem;
+  /*width: 10rem;
   height: 10rem;
-  display: inline-block;
-  opacity: 0.6;
+  display: inline-block;*/
+  opacity: 0.5;
 }
 
 #red {
