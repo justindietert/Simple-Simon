@@ -49,8 +49,8 @@ p {
 }
 
 .button-text {
-  letter-spacing: 0.0875rem;
-  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  /*text-transform: uppercase;*/
   font-weight: 400;
 }
 

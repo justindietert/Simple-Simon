@@ -35,7 +35,6 @@ function userChoice(event) {
    listenForUserChoice(selection);
 }
 
-
 function listenForUserChoice(selection) {
     clearInterval(timeoutId);
     userSelections.push(selection);
@@ -70,24 +69,12 @@ function simonGenerate(event) {
     var simonChoice = getNewTile();
     animateSquare(simonChoice);
     simonSelections.push(simonChoice.id);
-    console.log(simonSelections);
+    // console.log(simonSelections);
 }
 
-function simonSequence() { 
+function simonSequence() {
     simonGenerate();
 
-    var count = 0;
-    var max = simonSelections.length;
-    var interval = 1000; // interval time in milliseconds
-
-    var intervalId = setInterval(function () {
-        if (count >= max) {
-            clearInterval(intervalId);
-            console.log('All done');
-        } else {
-            count++;
-        }
-    }, interval);
 }
 
 
