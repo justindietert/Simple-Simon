@@ -1,14 +1,32 @@
 
+
+// Wait for player to click start.
+
+// Start a round, which follows these steps:
+//     Add a random number (1-4) to the sequence.
+//     Animate the sequence to the user.
+//     Enable user interaction with the board, and register any clicks on the Simon tiles.
+//     While the player has not entered an incorrect response, 
+//     and the number of clicks is less than the length of the sequence, wait for player input.
+
+// Continue adding rounds until the player loses.
+
+
+
 var tiles = document.getElementsByClassName('tile');
+
+// var tiles = document.getElementById('tiles');
 
 var startButton = document.getElementById('start');
 
 var userSelections = [];
 var simonSelections = [];
-var timeoutId;
+var copy;
+var round;
+// var timeoutId;
 
 // Start button listener
-startButton.addEventListener('click', simonSequence, false);
+startButton.addEventListener('click', simonGenerate, false);
 
 // add event listeners to each tile
 for (var i = 0; i < tiles.length; i++) {
@@ -27,23 +45,13 @@ function userUp(event) {
     event.target.style.opacity = "0.5";
 }
 
-// when user makes a tile selection, return that item's ID
+// when user makes a tile selection, return that item's data-tile value
 function userChoice(event) {
-   var selection = this.id;
-   console.log(selection);
+   var selection = this;
+   // var selection = this.dataset.tile;
+   userSelections.push(selection);
+   console.log(userSelections);
    // return selection;
-   listenForUserChoice(selection);
-}
-
-function listenForUserChoice(selection) {
-    clearInterval(timeoutId);
-    userSelections.push(selection);
-
-    console.log(userSelections);
-
-    timeoutId = setTimeout(function(){
-        alert("time over");
-    }, 3000);
 }
 
 
@@ -51,31 +59,47 @@ function listenForUserChoice(selection) {
 // randomly select a square
 // -------------------------------
 function getNewTile() {
-    var newTile = Math.floor(Math.random() * 4);
-    return tiles[newTile];
+    var newTile = Math.floor((Math.random() * 4));
+    return newTile;
 }
 
-// animate the square
-function animateSquare(chosen) {
+// light up the square
+function lightUp(chosen) {
     chosen.style.opacity = "1";
 
     var timeoutId = setTimeout(function () {
         chosen.style.opacity = "0.5";
-    }, 400);
+    }, 500);
+}
+
+// animate the simonSelections array
+function animate(simonSelections) {
+    var i = 0;
+    var interval = setInterval(function() {
+    
+        lightUp(simonSelections[i]);
+
+        i++;
+
+        if (i >= simonSelections.length) {
+            clearInterval(interval);
+            // activateSimonBoard();
+        }
+
+   }, 800);
 }
 
 
 function simonGenerate(event) {
-    var simonChoice = getNewTile();
-    animateSquare(simonChoice);
-    simonSelections.push(simonChoice.id);
-    // console.log(simonSelections);
+    var simonChoice = tiles[getNewTile()];
+    simonSelections.push(simonChoice);
+    // simonSelections.push(simonChoice.dataset.tile);
+    console.log(simonSelections);
+    copy = simonSelections.slice(0);
+    animate(simonSelections);
 }
 
-function simonSequence() {
-    simonGenerate();
 
-}
 
 
 // check if user selection matches simon's sequence
@@ -93,3 +117,31 @@ function continueSequence(simonSequence) {
 // count the number of rounds the user has gone.
     // arrayName.length
 
+
+
+
+
+
+
+
+
+
+// --- use this code below if want to set timer for ending game if user does not click in 3 seconds
+
+// function userChoice(event) {
+//    var selection = this.id;
+//    console.log(selection);
+//    // return selection;
+//    listenForUserChoice(selection);
+// }
+
+// function listenForUserChoice(selection) {
+//     clearInterval(timeoutId);
+//     userSelections.push(selection);
+
+//     console.log(userSelections);
+
+//     timeoutId = setTimeout(function(){
+//         alert("time over");
+//     }, 3000);
+// }

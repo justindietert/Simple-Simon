@@ -18,10 +18,6 @@ h1 {
     /*line-height: 1.2;*/
 }
 
-.center-text {
-  text-align: center;
-}
-
 .top-row {
   margin-top: 1.75rem;
 }
@@ -42,6 +38,8 @@ h2 a {
 p {
     font-weight: 400;
     margin-top: 1.125rem;
+    color: #96969a;
+
 }
 
 .button {
@@ -53,6 +51,11 @@ p {
   /*text-transform: uppercase;*/
   font-weight: 400;
 }
+
+/*.center-element {
+  margin: 0 auto;
+}*/
+
 
 .medium-grey {
     background-color: #96969a;

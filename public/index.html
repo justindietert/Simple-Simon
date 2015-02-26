@@ -25,50 +25,37 @@
   </head>
   <body>
     <div class="row top-row">
-      <div class="small-12 columns">
+      <div class="small-12 small-centered columns text-center">
 
         <div class="row">
-          <div class="small-12 columns">
-            <h1 class="center-text">Simple Simon</h1>
+          <div class="small-12 columns text-center">
+            <h1>Simple Simon</h1>
           </div>
         </div>
 
         <div class="row middle-row">
           <div class="small-12 columns">
-            <ul class="quadrant">
-              <li id="green" class="tile top-left"></li>
-              <li id="red" class="tile top-right"></li>
-              <li id="yellow" class="tile bottom-left"></li>
-              <li id="blue" class="tile bottom-right"></li>
+            <ul id="tiles" class="quadrant">
+              <li id="green" data-tile="1" class="tile top-left"></li>
+              <li id="red" data-tile="2" class="tile top-right"></li>
+              <li id="yellow" data-tile="3" class="tile bottom-left"></li>
+              <li id="blue" data-tile="4" class="tile bottom-right"></li>
             </ul>
           </div>
         </div>
 
-      <!--   <div class="row">
-          <div class="small-12 columns">
-            <div id="green" class="tile"></div>
-            <div id="red" class="tile"></div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="small-12 columns">
-            <div id="yellow" class="tile"></div>
-            <div id="blue" class="tile"></div>
-          </div>
-        </div> -->
-
-        <div class="row">
-          <div class="small-12 columns">
-            <div id="">
+        <div class="row middle-row">
+          <div class="small-12 small-centered text-center columns">
               <p>Click start to begin.</p>
-              <div id="start" class="button small round medium-grey button-text">Start game</div>
-            </div>
+              <div id="start" class="button small round medium-grey button-text">Start</div>
           </div>
         </div>
        
       </div>
     </div>
+
+
+
     
     <script src="/js/foundation/vendor/jquery.js"></script>
     <script src="/js/foundation/foundation.min.js"></script>
