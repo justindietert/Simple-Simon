@@ -52,6 +52,11 @@ p {
   font-weight: 400;
 }
 
+.deactivated-start {
+  color: #e7e7eb;
+  background-color: #e7e7eb;
+}
+
 /*.center-element {
   margin: 0 auto;
 }*/
@@ -97,28 +102,27 @@ ul.quadrant li.bottom-right {
   margin: 0.0625rem 0 0 0.0625rem;
 }
 
-#red, #yellow, #green, #blue {
+.red, .yellow, .green, .blue {
   /*width: 10rem;
   height: 10rem;
   display: inline-block;*/
   opacity: 0.5;
 }
 
-#red {
+.red {
   background-color: #FF4136;
 }
 
-#yellow {
+.yellow {
   background-color: #FFDC00;
 }
 
-#green {
+.green {
   background-color: #2ECC40;
 }
 
-#blue {
+.blue {
   background-color: #0074D9;
 }
-
 
 
