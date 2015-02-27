@@ -2,13 +2,13 @@
 
     'use strict';
 
-    var userSequence = [];
-    var simonSequence = [];
-
     var tiles = document.getElementsByClassName('tile');
     var startButton = document.getElementById('start');
 
     startButton.addEventListener('click', start, false);
+
+    var userSequence = [];
+    var simonSequence = [];
 
     function start() {
         document.getElementById('game-over').innerHTML = "";
