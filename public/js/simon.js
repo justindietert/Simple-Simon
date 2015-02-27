@@ -1,18 +1,4 @@
 
-
-// Wait for player to click start.
-
-// Start a round, which follows these steps:
-//     Add a random number (1-4) to the sequence.
-//     Animate the sequence to the user.
-//     Enable user interaction with the board, and register any clicks on the Simon tiles.
-//     While the player has not entered an incorrect response, 
-//     and the number of clicks is less than the length of the sequence, wait for player input.
-
-// Continue adding rounds until the player loses.
-
-
-
 var tiles = document.getElementsByClassName('tile');
 
 var startButton = document.getElementById('start');

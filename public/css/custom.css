@@ -6,11 +6,25 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     background-color: #242428; /* #2e2e32 */
-    /*background: linear-gradient(#e7e7eb, #fff); */
-    /*background: radial-gradient(at top, #fff 40%, #c8c8cc, #96969a); */
     background-image: url(../img/LineScreen.png);
     background-repeat: repeat;
     background-size: 0.1875rem 0.1875rem;
+}
+
+.simon-container {
+  width: 19.25rem;
+  margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  left: 5.3875rem;
+  top: 5.56rem;
+  z-index: 1000;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -38,7 +52,14 @@ h1 {
 
 h2 {
     font-weight: 600;
-    /*font-size: 2.625rem;*/
+    letter-spacing: 0.0875rem;
+    color: #ff6652;
+    font-size: 3.25rem;
+    line-height: 3.75rem;
+    cursor: default;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
 }
 
 h2 a {
@@ -93,6 +114,9 @@ button:hover, button:focus, .button:hover, .button:focus {
   letter-spacing: 0.125rem;
   text-transform: uppercase;
   font-weight: 400;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;
 }
 
 .round-text, .round-text:hover {
@@ -128,42 +152,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 /* Simple Simon Styles
 -------------------------------------------------- */
-
-/*ul.quadrant {
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-}
-
-ul.quadrant li {
-  float: left;
-}
-
-ul.quadrant li.top-left {
-  border-top-left-radius: 10rem;
-  width: 10rem;
-  height: 10rem;
-  margin-right: 1rem;
-}
-
-ul.quadrant li.top-right {
-  border-top-right-radius: 10rem;
-  width: 10rem;
-  height: 10rem;
-}
-
-ul.quadrant li.bottom-left {
-  border-bottom-left-radius: 10rem;
-  width: 10rem;
-  height: 10rem;
-}
-
-ul.quadrant li.bottom-right {
-  border-bottom-right-radius: 10rem;
-  width: 10rem;
-  height: 10rem;
-}*/
-
 
 ul.quadrant {
   padding: 0;
@@ -215,6 +203,11 @@ ul.quadrant li.bottom-right {
 
 .blue {
   background-color: #0074D9;
+}
+
+.all-red {
+  background-color: #FF4136;
+  opacity: 0.75 !important;
 }
 
 

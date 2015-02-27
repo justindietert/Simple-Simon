@@ -11,6 +11,11 @@
     startButton.addEventListener('click', start, false);
 
     function start() {
+        document.getElementById('game-over').innerHTML = "";
+        document.getElementById('0').classList.remove('all-red');
+        document.getElementById('1').classList.remove('all-red');
+        document.getElementById('2').classList.remove('all-red');
+        document.getElementById('3').classList.remove('all-red');
         simonSequence = [];
         newRound();
     }
@@ -64,7 +69,7 @@
     function compareSequences() {
         var sequenceError = false;
 
-        for (var i = 0; i < userSequence.length; i ++) {
+        for (var i = 0; i < userSequence.length; i++) {
             if (simonSequence[i] == undefined || simonSequence[i] != userSequence[i]) {
                 sequenceError = true;
                 break;
@@ -80,24 +85,28 @@
 
     function gameOver() {
         disableUserClick();
-        // location.reload(true);
-
-        // confirm("Game over. Play again?");
-
-        // if(confirm) {
-        //     start();
-        // }
+        document.getElementById('0').classList.add('all-red');
+        document.getElementById('1').classList.add('all-red');
+        document.getElementById('2').classList.add('all-red');
+        document.getElementById('3').classList.add('all-red');
+        document.getElementById('game-over').innerHTML = "GAME<br>OVER";
+        document.getElementById('prompt-text').innerHTML = "Click start to play again.";
+        enableStartButton();
     }
 
 
     function userClick() {
         var userChoice = this.id;
-
         userSequence.push(userChoice);
-
         compareSequences();
     }
 
+    function enableStartButton() {
+        startButton.addEventListener('click', start, false);
+        document.getElementById('prompt-text').classList.remove('repeat-sequence');
+        document.getElementById('start').classList.remove('round-text');
+        document.getElementById('start').innerHTML = "Start";
+    }
 
     function enableUserClick() {
         document.getElementById('0').addEventListener('click', userClick, false);
@@ -112,7 +121,7 @@
 
         // tell user to repeat sequence.
         document.getElementById('prompt-text').classList.remove('watch-sequence');
-        document.getElementById('prompt-text').innerHTML = "Repeat the sequence.";
+        document.getElementById('prompt-text').innerHTML = "Repeat.";
         document.getElementById('prompt-text').classList.add('repeat-sequence');
     }
 
