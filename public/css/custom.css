@@ -5,7 +5,12 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    /*background-color: #333399;   */
+    background-color: #242428; /* #2e2e32 */
+    /*background: linear-gradient(#e7e7eb, #fff); */
+    /*background: radial-gradient(at top, #fff 40%, #c8c8cc, #96969a); */
+    background-image: url(../img/LineScreen.png);
+    background-repeat: repeat;
+    background-size: 0.1875rem 0.1875rem;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -14,8 +19,13 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 h1 {
     font-weight: 300;
-    color: #96969a;
+    color: #828286;
+    /*color: #96969a;*/
     /*line-height: 1.2;*/
+    cursor: default;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
 }
 
 .top-row {
@@ -35,49 +45,134 @@ h2 a {
     color: #221c35;
 }
 
-p {
+h5 {
     font-weight: 400;
+    letter-spacing: 0.0625rem;
     margin-top: 1.125rem;
-    color: #96969a;
-
+    margin-bottom: 1.125rem;
+    color: #828286;
+    cursor: default;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
 }
 
 .button {
   font-family: 'Source Sans Pro', sans-serif;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: none;
+  background: none;
+  border-color: #828286;
+  color: #96969a;
+  transition: #828286 300ms ease-out;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+    background-color: rgba(130, 130, 134, 0.4);
+    color: #c8c8cc;
 }
 
 .button-text {
-  letter-spacing: 0.0625rem;
-  /*text-transform: uppercase;*/
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
   font-weight: 400;
 }
 
-.deactivated-start {
-  color: #e7e7eb;
-  background-color: #e7e7eb;
+.round-text, .round-text:hover {
+  color: #d0b411; /* #FFDC00 */
+  background-color: none;
+  background: none;
+  border-color: #145ca4;
+  cursor: default;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none; 
 }
 
-/*.center-element {
-  margin: 0 auto;
-}*/
+.watch-sequence {
+  color: #be3a34 ; /* #FF4136 */
+  cursor: default;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;
+}
 
+.repeat-sequence {
+  color: #2e9a3b;  /* #2ECC40 */
+  cursor: default;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;
+}
 
 .medium-grey {
-    background-color: #96969a;
+    background-color: #828286;
 }
 
 /* Simple Simon Styles
 -------------------------------------------------- */
 
+/*ul.quadrant {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+
+ul.quadrant li {
+  float: left;
+}
+
+ul.quadrant li.top-left {
+  border-top-left-radius: 10rem;
+  width: 10rem;
+  height: 10rem;
+  margin-right: 1rem;
+}
+
+ul.quadrant li.top-right {
+  border-top-right-radius: 10rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+ul.quadrant li.bottom-left {
+  border-bottom-left-radius: 10rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+ul.quadrant li.bottom-right {
+  border-bottom-right-radius: 10rem;
+  width: 10rem;
+  height: 10rem;
+}*/
+
+
 ul.quadrant {
   padding: 0;
   margin: 0 auto;
   list-style: none;
-  width: 18.875rem;
-  height: 18.875rem;
-  border-radius: 18.875rem;
+  width: 19.125rem;
+  height: 19.125rem;
+  border-radius: 19.125rem;
   overflow: hidden;
-  /*background: #b00;*/
 }
 
 ul.quadrant li {
@@ -87,26 +182,23 @@ ul.quadrant li {
 }
 
 ul.quadrant li.top-left {
-  margin: 0 0.0625rem 0.0625rem 0;
+  margin: 0 0.1875rem 0.1875rem 0;
 }
 
 ul.quadrant li.top-right {
-  margin: 0 0 0.0625rem 0.0625rem;
+  margin: 0 0 0.1875rem 0.1875rem;
 }
 
 ul.quadrant li.bottom-left {
-  margin: 0.0625rem 0.0625rem 0 0;
+  margin: 0.1875rem 0.1875rem 0 0;
 }
 
 ul.quadrant li.bottom-right {
-  margin: 0.0625rem 0 0 0.0625rem;
+  margin: 0.1875rem 0 0 0.1875rem;
 }
 
 .red, .yellow, .green, .blue {
-  /*width: 10rem;
-  height: 10rem;
-  display: inline-block;*/
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .red {
