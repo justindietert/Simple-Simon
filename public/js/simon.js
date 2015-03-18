@@ -1,3 +1,4 @@
+// Old Simon Code. See simon_two.js for current game version
 
 var tiles = document.getElementsByClassName('tile');
 
@@ -43,7 +44,6 @@ function activateStartButton() {
     // startButton.innerHTML = 'Start';
     startButton.className = 'button small round medium-grey button-text';
 }
-
 
 // when user mouses down on tile, opacity is brought up to "1"
 function userDown(event) {
@@ -102,14 +102,6 @@ function checkLose() {
     }
 }
 
-// function activateSimonForUser() {
-//     userChoice();
-// }
-
-// function deactivateSimon() {
-
-// }
-
 function endGame() {
     alert("you lose");
     // activateStartButton();
@@ -150,41 +142,3 @@ function animate(simonSelections) {
    }, 800);
 }
 
-
-
-
-
-// count the number of rounds the user has gone.
-    // arrayName.length
-
-
-
-
-
-
-
-
-
-
-
-
-
-// --- use this code below if want to set timer for ending game if user does not click in 3 seconds
-
-// function userChoice(event) {
-//    var selection = this.id;
-//    console.log(selection);
-//    // return selection;
-//    listenForUserChoice(selection);
-// }
-
-// function listenForUserChoice(selection) {
-//     clearInterval(timeoutId);
-//     userSelections.push(selection);
-
-//     console.log(userSelections);
-
-//     timeoutId = setTimeout(function(){
-//         alert("time over");
-//     }, 3000);
-// }
